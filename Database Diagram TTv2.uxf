@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>70</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>ApplicationUser
+--
+Variables Defined by Template</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>260</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>User
+--
+ID: int
+Fullname : varchar
+Role: varchar
+Tickets: Tickets</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>220</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Ticket
+--
+ID : int
+TicketNumber: int
+ActionWith: varchar
+DateCreated: varchar
+DefinedPriority: varchar
+Description: varchar
+InProgressWith: varchar
+Notes: varchar
+Status: string
+Customer: Customer
+CustomerId: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>190</y>
+      <w>210</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+ID : int
+Active : bool
+MainCustomerContact : varchar
+Name : varchar
+Notes : varchar
+NumClosedTickets : int
+NumOpenTickets : int
+NumOpenTicketsCust : int 
+NumOpenTicketsRelayware : int 
+RelaywareContact: varchar
+RelaywareResource : varchar
+ServiceDuration : varchar
+ServiceStartDate : DateTime
+ServiceEndDate : DateTime
+Ticket : IEnumerable&lt;Ticket&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>520</y>
+      <w>230</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>DailyTicketCount
+--
+ID : int
+Day : DateTime
+TotalClosedTickets : int
+TotalOpenedTicket : int 
+TotalOpenTicketsCust : int
+TotalOpenTicketsRelayware : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>520</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>DailyTime
+--
+ID : int
+Date: datetime
+Time: datetime
+Customer: Customer
+CustomerID: int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>300</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>290</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>460</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
